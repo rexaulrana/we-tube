@@ -15,13 +15,64 @@
   <body class="ml-10 mr-10 mt-3">
     <header>
       <!-- Nav bar section-->
-      <div class="flex justify-between items-center">
-        <div><img src="./images/Logo.png" alt="" /></div>
+      <div class="flex justify-between items-center gap-2">
+        <div>
+          <a href=""><img src="./images/Logo.png" alt="" /></a>
+        </div>
         <div><button class="btn bg-slate-100">Sort by view</button></div>
-        <div><button class="btn bg-red-600 text-white">Blog</button></div>
+        <div>
+          <button class="btn bg-red-600 hover:bg-red-800 text-white">
+            Blog
+          </button>
+        </div>
+      </div>
+
+      <!-- Category section -->
+      <div
+        id="categories-container"
+        class="flex justify-center items-center gap-4 mt-5"
+      >
+        <!-- <a href="" class="bg-red-600 text-white p-3">All Videos</a>
+        <a href="" class="bg-red-600 text-white p-3">Music</a>
+        <a href="" class="bg-red-600 text-white p-3">Movie</a> -->
       </div>
     </header>
-    <main></main>
+    <main>
+      <!-- card section -->
+      <section
+        id="card-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-5 h-5"
+      >
+        <!-- <div class="card card-compact w-96 bg-base-100 shadow-xl p-10">
+          <figure>
+            <div class="relative">
+            
+            </div>
+            <p
+              class="absolute right-5 top-16 bg-slate-400 py-1 px-2 rounded-lg"
+            >
+              3 hours 30 minutes ago
+            </p>
+          </figure>
+          <div class="flex justify-center gap-5 mt-7">
+            <img src="" alt="" />
+            <h3>Image</h3>
+
+            <div>
+              <h3>Title:</h3>
+              <p>Name: <span>Blue badge</span></p>
+              <p>Views:</p> -->
+        <!-- </div>
+          </div>
+        </div> -->
+
+        <!-- <img
+          class="h- rounded-full w"
+          src="./images/116707592_184095613112854_4910542172907705516_o.jpg"
+          alt=""
+        /> -->
+      </section>
+    </main>
 
     <footer></footer>
 
