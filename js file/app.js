@@ -83,7 +83,7 @@ const displayContent = (contents) => {
       </div>
     </div>
   </div>
-
+ 
 
     `;
     cardContainer.appendChild(card);
