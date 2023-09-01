@@ -50,20 +50,20 @@ const displayContent = (contents) => {
   cardContainer.textContent = "";
 
   contents.forEach((content) => {
-    // console.log(content.others.posted_date);
+    console.log(content);
     // console.log(content.authors[0].verified);
 
     const card = document.createElement("div");
     card.innerHTML = `
-    <div class=" card  h-96 bg-base-100   shadow-xl py-5 rounded-xl ">
+    <div class=" card  h-80 bg-base-100   shadow-xl  rounded-xl ">
     <figure class="">
       <div class="relative">
-        <img class="w-full h-48" src="${content?.thumbnail}" alt="" />
+        <img class="w-full h-72" src="${content?.thumbnail}" alt="" />
       </div>
       <p
-        class="absolute right-5  -top-26 bg-slate-400 py-1 px-2 rounded-lg"
+        class="absolute right-2  bottom-36 bg-black px-1 rounded-lg text-white"
       >
-        AGO
+        3 hours 45 minutes ago 
       </p>
     </figure>
     <div class="flex justify-start items-start gap-3 mt-4 p-4">
@@ -73,7 +73,9 @@ const displayContent = (contents) => {
       <div>
         <h3 class="font-medium">${content?.title}</h3>
         <div class="flex justify-start items-center gap-1">
-        <h1>${content?.authors[0]?.profile_name} </h1>
+        <h1 class="text-lg font-normal">${
+          content?.authors[0]?.profile_name
+        } </h1>
         <span>${
           content?.authors[0]?.verified
             ? ' <img title="verified" class="" src="./images/blue_badge.jpg" alt="" />'
@@ -81,7 +83,7 @@ const displayContent = (contents) => {
         }</span>
         </div>
          
-        <p>${content.others.views} Views</p>
+        <p class="text-sm font-normal">${content.others.views} Views</p>
       </div>
     </div>
   </div>
