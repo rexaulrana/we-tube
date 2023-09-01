@@ -23,13 +23,15 @@ const displayCategories = (categories) => {
 
 // display content
 const loadContent = async (categoryId = "1000") => {
-  console.log(categoryId);
+  // console.log(categoryId);
   const res = await fetch(
     `https://openapi.programming-hero.com/api/videos/category/${categoryId}`
   );
   const data = await res.json();
   const contents = data.data;
   displayContent(contents);
+  items = contents;
+  // console.log(contents);
 };
 
 //display content
@@ -90,5 +92,18 @@ const displayContent = (contents) => {
     // console.log(content);
   });
 };
+
+// sort by view
+const sortItems = () => {
+  const data = items.sort((a, b) => {
+    const view1 = parseFloat(a.others.views);
+    const view2 = parseFloat(b.others.views);
+    // console.log(view1, view2);
+    return view2 - view1;
+  });
+
+  displayContent(data);
+};
+
 loadContent();
 loadCategory();
