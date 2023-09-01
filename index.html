@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PH Tube</title>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/aac9b25ef7.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- DaisyUI and tailwind cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
@@ -72,6 +77,22 @@
           alt=""
         /> -->
       </section>
+
+      <!-- show error when there is no content -->
+      <div
+        id="error-container"
+        class="flex flex-col justify-center items-center hidden"
+      >
+        <img src="./images/Icon.png" alt="" />
+        <h2 class="font-semibold text-xl text-black">
+          Oops!! Sorry, There is no content here.
+        </h2>
+      </div>
+
+      <!-- blue badge -->
+      <div id="blue-badge" class="">
+        <!-- <img class="" src="./images/blue_badge.jpg" alt="" /> -->
+      </div>
     </main>
 
     <footer></footer>
