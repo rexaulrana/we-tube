@@ -96,10 +96,10 @@ const displayContent = (contents) => {
 // sort by view
 const sortItems = () => {
   const data = items.sort((a, b) => {
-    const view1 = parseFloat(a.others.views);
-    const view2 = parseFloat(b.others.views);
+    const views1 = parseFloat(a.others.views);
+    const views2 = parseFloat(b.others.views);
     // console.log(view1, view2);
-    return view2 - view1;
+    return views2 - views1;
   });
 
   displayContent(data);
