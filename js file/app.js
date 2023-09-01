@@ -74,8 +74,8 @@ const displayContent = (contents) => {
         <h1>${content?.authors[0]?.profile_name} </h1>
         <span>${
           content?.authors[0]?.verified
-            ? ' <img class="" src="./images/blue_badge.jpg" alt="" />'
-            : " "
+            ? ' <img title="verified" class="" src="./images/blue_badge.jpg" alt="" />'
+            : "  "
         }</span>
         </div>
          
