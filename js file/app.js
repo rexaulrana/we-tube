@@ -53,16 +53,12 @@ const displayContent = (contents) => {
     // console.log(content.others.posted_date);
     // convert seconds to hours and minutes
     let seconds = content.others.posted_date;
-    let hours = Math.floor(seconds / 3600);
+    const hours = Math.floor(seconds / 3600);
     seconds %= 3600;
     let minutes = Math.floor(seconds / 60);
+    // console.log(content.others.posted_date);
+
     const secondsContainer = document.getElementById("seconds-container");
-    console.log(hours);
-    // if (seconds === "") {
-    //   secondsContainer.classList.add("hidden");
-    // } else {
-    //   secondsContainer.classList.remove("hidden");
-    // }
 
     const card = document.createElement("div");
     card.innerHTML = `
@@ -72,9 +68,11 @@ const displayContent = (contents) => {
         <img class="w-full h-72" src="${content?.thumbnail}" alt="" />
       </div>
       <p id="seconds-container"
-        class="absolute right-2  bottom-36 bg-black px-1 rounded-lg text-white "
+        class="absolute right-2  bottom-36 bg-black px-1 rounded-lg text-white  "
       >
-        ${hours ? hours : ""}hrs ${minutes ? minutes : ""}min ago      </p>
+       ${
+         seconds ? hours + "hrs" + " " + minutes + "min" + " " + "ago" : ""
+       } </p>
     </figure>
     <div class="flex justify-start items-start gap-3 mt-4 p-4">
        <img class="rounded-full w-12" src="${
